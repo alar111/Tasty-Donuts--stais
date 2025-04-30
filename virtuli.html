@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tasty Donuts</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+          <div class="container">
+            <header>
+              <div class="logo-area">
+                <div class="logo-placeholderone">
+                  <div class="logo-placeholdertwo">
+                  <a href="index.html">
+                  <img src="logo.png" width="50px"></img>
+                </a>
+                </div>
+              </div>
+                </div>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="virtuli.html">Virtuļi</a></li>
+           <li><a href="karte.html">Kafejnīcu karte</a></li>
+          <li><a href="parmums.html">Par mums</a></li>
+        </ul>
+      </nav>
+
+          <div class="autorizacija">
+            <button class="autorizacija-button">Autorizācija</button>
+            <div class="autorizacija-content">
+              <a href="login.html">Ieiet kontā</a>
+              <a href="signup.html">Jauns konts</a>
+          </div>
+    </header>
+
+    <main>
+      <!-- Orange background for the donut boxes -->
+      <div class="orange-background">
+        <div class="box-row">
+          <div class="boxvirtulis">
+            <img src="1.webp" width="250px">
+            <h3>“Rozā pērle” €0.80
+           </h3>
+          </div>
+           <div class="boxvirtulis"">
+            <img src="2.webp" width="250px">
+           <h3>
+             “Šokolādes kārdinājums” €1.00
+            </h3></div>
+           <div class="boxvirtulis">
+              <img src="3.webp" width="250px">
+             <h3>
+               “Citronu feerija” €0.90
+              </h3>
+           </div>
+          <div class="boxvirtulis">
+             <img src="4.webp" width="250px">
+            <h3>
+              “Cepums-Krančs” €1.10
+             </h3>
+          </div>
+           
+          </div>
+        <div class="box-row">
+          <div class="boxvirtulis">
+             <img src="5.webp" width="250px">
+            <h3>
+              “Zemesriekstu jūsma” €0.95
+             </h3>
+          </div>
+           <div class="boxvirtulis"">
+            <img src="6.webp" width="250px">
+          <h3>
+            “Ceriņsamts” €0.85
+           </h3>
+             </div>
+           <div class="boxvirtulis">
+              <img src="7.webp" width="250px">
+             <h3>
+               “Vaniļas dzirkstele” €0.75
+              </h3>
+           </div>
+          <div class="boxvirtulis">
+            <img src="8.webp" width="250px">
+            <h3>
+              “Rubīna greznība” €1.05
+             </h3>
+          </div>
+           
+          </div>
+          <div class="box-row">
+            <div class="boxvirtulis">
+               <img src="9.webp" width="250px">
+              <h3>
+                “Zvaigžņu vakars” €1.20
+               </h3>
+            </div>
+             <div class="boxvirtulis"">
+              <img src="10.webp" width="250px">
+               <h3>
+                 “Pistāciju zīds” €1.25
+                </h3>
+             </div>
+             <div class="boxvirtulis">
+                <img src="11.webp" width="250px">
+                <h3> “Auzu harmonija” €0.70</h3>
+             </div>
+           <div class="boxvirtulis">
+            <h2>Nopirkt visu</h2><br>
+            <h1>10€</h1><br>
+          </div>
+
+          </div>
+        
+      </div>
+    </main>
+
+    <footer>
+      
+
+      <!-- Copyright in the center -->
+      <div class="footer-center">
+        Copyright ©2025 Tasty Donuts.
+      </div>
+    </footer>
+  </div>
+
+
+  <style>
+    
+    .autorizacija-button {
+      background-color: #FF97CD;
+      font-family: "Anonymous Pro", monospace;
+      color: #000;
+      width: 120px;
+      padding: 0px;
+      font-weight: 500;
+      font-size: 15px;
+      border: none;
+    }
+
+      .autorizacija-button {
+        background-color: #FA98B7;
+        font-family: "Anonymous Pro", monospace;
+        color: #000;
+        width: 160px;
+        padding: 0px;
+        font-weight: 500;
+        font-size: 20px;
+        border: none;
+      }
+
+      .autorizacija {
+        position: relative;
+        display: inline-block;
+      }
+
+      .autorizacija-content {
+        display: none;
+        position: absolute;
+        background-color: #ffffff;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+
+      .autorizacija-content a {
+        color: black;
+        padding: 8px 10px;
+        font-family: "Anonymous Pro", monospace;
+        font-weight: 500;
+        font-size: 20px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .autorizacija-content a:hover {background-color: #FA98B7;}
+
+      .autorizacija:hover .autorizacija-content {display: block;}
+
+      .autorizacija:hover .autorizacija-button {background-color: #FA98B7; color: #ffffff;}
+
+      /* Reset/normalize */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Body gets an overall pink color (matches the top/header/footer in screenshot) */
+      body {
+        font-family: "Anonymous Pro", monospace;
+      }
+
+      /* Constrain overall site width */
+      .container {
+        max-width: 4096px;
+        min-width: 1900px;
+        min-height: 1080px;
+        margin: 0 auto;
+        /* If you’d like a background behind all content, uncomment:
+           background-color: #ffb6c1;
+        */
+      }
+
+
+      /* HEADER STYLES */
+      header {
+        background-color: #FA98B7; /* Pink top bar */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 50px;
+      }
+
+      /* Logo area (left) */
+      .logo-area {
+        display: flex;
+        align-items: center;
+      }
+
+      .logo-placeholderone {
+        width: 160px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #FA98B7;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .logo-placeholdertwo {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .logo-placeholder span {
+        color: #fff;
+        font-size: 10px;
+        font-weight: bold;
+        line-height: 12px;
+      }
+
+      /* Navigation (center) */
+      .main-nav ul {
+        list-style: none;
+        display: flex;
+        gap: 50px;
+      }
+
+      .main-nav a {
+        text-decoration: none;
+        color: #ffffff; /* White nav text as per screenshot */
+        font-weight: 500;
+        font-size: 20px;
+      }
+
+      .main-nav a:hover {
+        text-decoration: none;
+        color: #E39C49; /* White nav text as per screenshot */
+        font-weight: 500;
+        font-size: 20px;
+      }
+
+
+    
+    /* Log in (right) */
+    .login a {
+      text-decoration: none;
+      color: #000; /* Black text for 'Log in' */
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    /* MAIN CONTENT STYLES */
+    .orange-background {
+      background-color: #E39C49; /* Orange/brown area behind pink boxes */
+      padding: 40px 20px; /* Adjust spacing to match your screenshot */
+      min-height: 1080px;
+      max-height: 2304px; /* Enough height to fit 5 boxes comfortably */
+    }
+
+    /* Two distinct rows of boxes */
+    .box-row {
+      display: flex;
+      gap: 90px; /* Space between boxes */
+      justify-content: center; /* Center them horizontally */
+      margin-bottom: 90px; /* Space between top/bottom rows */
+    }
+
+
+   
+
+    /* Each pink box */
+    .boxvirtulis {
+      background-color: #FA98B7;
+      width: 360px;
+      height: 360px;
+      border-radius: 90px;
+      display: table-column;
+      align-items: center;
+      justify-content: center;
+      /* Adjust these to exactly match the shapes in the screenshot */
+    }
+    
+    .boxvirtulis h3{
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .boxvirtulis h2{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+       margin-top: 130px;
+      font-size: 34px;
+    }
+
+    .boxvirtulis h1{
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin-top: 5px;
+    }
+    
+    .boxvirtulis img {
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+       margin-top: 45px;
+       margin-left: 55px;
+      border-radius: 62px;
+
+    }
+
+
+    /* FOOTER STYLES */
+    footer {
+      background-color: #FA98B7; /* Pink footer bar */
+      position: relative;
+      padding: 15px 20px;
+    }
+
+    /* Left and right pink “buttons” in footer */
+    .footer-button {
+      background-color: #ffffff;
+      display: inline-block;
+      padding: 5px 10px;
+      border-radius: 8px;
+    }
+
+    .footer-button a {
+      color: #000;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    /* Position them to the extreme left/right inside footer */
+    .footer-left {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .footer-right {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    /* Center text in the footer */
+    .footer-center {
+      text-align: center;
+      font-size: 14px;
+      color: #000;
+      font-weight: 500;
+    }
+
+
+  </style>
+</body>
+</html>

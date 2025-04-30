@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tasty Donuts</title>
+</head>
+<body>
+
+          <div class="container">
+            <header>
+              <div class="logo-area">
+                <div class="logo-placeholderone">
+                  <div class="logo-placeholdertwo">
+                  <a href="index.html">
+                  <img src="logo.png" width="50px"></img>
+                </a>
+                </div>
+              </div>
+                </div>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="virtuli.html">Virtuļi</a></li>
+          <li><a href="karte.html">Kafejnīcu karte</a></li>
+          <li><a href="parmums.html">Par mums</a></li>
+        </ul>
+      </nav>
+
+          <div class="autorizacija">
+            <button class="autorizacija-button">Autorizācija</button>
+            <div class="autorizacija-content">
+              <a href="login.html">Ieiet kontā</a>
+              <a href="signup.html">Jauns konts</a>
+          </div>
+    </header>
+
+    <main>
+      <!-- Orange background for the donut boxes -->
+      <div class="orange-background">
+        <div class="box-row">
+           <div class="form-containerone">
+             <div id="map"></div>
+           
+
+              </div>
+           </div>
+      </div>
+    </main>
+
+    <footer>
+      
+
+      <!-- Copyright in the center -->
+      <div class="footer-center">
+        Copyright ©2025 Tasty Donuts.
+      </div>
+    </footer>
+  </div>
+
+ 
+  
+  <style>
+    
+      .autorizacija-button {
+        background-color: #FA98B7;
+        font-family: "Anonymous Pro", monospace;
+        color: #000;
+        width: 160px;
+        padding: 0px;
+        font-weight: 500;
+        font-size: 20px;
+        border: none;
+      }
+
+      .autorizacija {
+        position: relative;
+        display: inline-block;
+      }
+
+      .autorizacija-content {
+        display: none;
+        position: absolute;
+        background-color: #ffffff;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+
+      .autorizacija-content a {
+        color: black;
+        padding: 8px 10px;
+        font-family: "Anonymous Pro", monospace;
+        font-weight: 500;
+        font-size: 20px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .autorizacija-content a:hover {background-color: #FA98B7;}
+
+      .autorizacija:hover .autorizacija-content {display: block;}
+
+      .autorizacija:hover .autorizacija-button {background-color: #FA98B7; color: #ffffff;}
+
+      /* Reset/normalize */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Body gets an overall pink color (matches the top/header/footer in screenshot) */
+      body {
+        font-family: "Anonymous Pro", monospace;
+      }
+
+      /* Constrain overall site width */
+      .container {
+        max-width: 4096px;
+        min-width: 1900px;
+        min-height: 1080px;
+        margin: 0 auto;
+        /* If you’d like a background behind all content, uncomment:
+           background-color: #ffb6c1;
+        */
+      }
+
+
+      /* HEADER STYLES */
+      header {
+        background-color: #FA98B7; /* Pink top bar */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 50px;
+      }
+
+      /* Logo area (left) */
+      .logo-area {
+        display: flex;
+        align-items: center;
+      }
+
+      .logo-placeholderone {
+        width: 160px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #FA98B7;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .logo-placeholdertwo {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .logo-placeholder span {
+        color: #fff;
+        font-size: 10px;
+        font-weight: bold;
+        line-height: 12px;
+      }
+
+      /* Navigation (center) */
+      .main-nav ul {
+        list-style: none;
+        display: flex;
+        gap: 50px;
+      }
+
+      .main-nav a {
+        text-decoration: none;
+        color: #ffffff; /* White nav text as per screenshot */
+        font-weight: 500;
+        font-size: 20px;
+      }
+
+      .main-nav a:hover {
+        text-decoration: none;
+        color: #E39C49; /* White nav text as per screenshot */
+        font-weight: 500;
+        font-size: 20px;
+      }
+
+
+
+    /* Log in (right) */
+    .login a {
+      text-decoration: none;
+      color: #000; /* Black text for 'Log in' */
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    /* MAIN CONTENT STYLES */
+    .orange-background {
+      background-color: #E39C49; /* Orange/brown area behind pink boxes */
+      padding: 40px 20px; /* Adjust spacing to match your screenshot */
+      min-height: 1080px;
+      max-height: 2304px; /* Enough height to fit 5 boxes comfortably */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Two distinct rows of boxes */
+    .box-row {
+      display: flex;
+      gap: 40px; /* Space between boxes */
+      justify-content: center; /* Center them horizontally */
+      margin-bottom: 40px; /* Space between top/bottom rows */
+    }
+
+    .form-containerone {
+      background-color: #FA98B7;
+      width: 1500px;
+      height: 1000px;
+      border-radius: 250px;
+      padding: 40px;
+      text-align: center;
+      gap: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .form-containerone h1 {
+      margin-bottom: 40px;
+      font-size: 50px;
+      color: #000;
+
+      }
+
+    .form-containerone p {
+    display: flex;
+    gap: 15px;
+    text-align: justify; /* Align labels to the left */
+      font-size: 30px;
+      max-width: 1200px;
+      }
+    /* Each pink box */
+    .boxone {
+      background-color: #FA98B7;
+      width: 2000px;
+      height: 360px;
+      border-radius: 40px;
+      /* Adjust these to exactly match the shapes in the screenshot */
+    }
+
+    /* Each pink box */
+    .boxtwo {
+      background-color: #FA98B7;
+      width: 2000px;
+      height: 360px;
+      border-radius: 40px;
+      /* Adjust these to exactly match the shapes in the screenshot */
+    }
+
+
+    #map { 
+      
+      height: 900px; 
+      width: 1350px;
+      border-radius: 250px;
+         }
+    
+   
+
+    
+    
+    /* FOOTER STYLES */
+    footer {
+      background-color: #FA98B7; /* Pink footer bar */
+      position: relative;
+      padding: 15px 20px;
+    }
+
+    /* Left and right pink “buttons” in footer */
+    .footer-button {
+      background-color: #ffffff;
+      display: inline-block;
+      padding: 5px 10px;
+      border-radius: 8px;
+    }
+
+    .footer-button a {
+      color: #000;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    /* Position them to the extreme left/right inside footer */
+    .footer-left {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .footer-right {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    /* Center text in the footer */
+    .footer-center {
+      text-align: center;
+      font-size: 14px;
+      color: #000;
+      font-weight: 500;
+    }
+
+
+    
+  </style>
+  
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+  
+  <script>
+
+  var map = L.map('map').setView([56.891416, 24.039014], 11);
+
+
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(map);
+
+
+ 
+     var marker = L.marker([56.891416, 24.039014]).addTo(map);
+     var marker = L.marker([56.950966, 24.11499]).addTo(map);
+     var marker = L.marker([56.941978, 24.152069]).addTo(map);
+     var marker = L.marker([56.965193, 23.79158]).addTo(map);
+     var marker = L.marker([56.913126, 24.02298]).addTo(map);
+     var marker = L.marker([56.949843, 24.222107]).addTo(map);
+     var marker = L.marker([56.826436, 24.23172]).addTo(map);
+     var marker = L.marker([56.950592, 24.056625]).addTo(map);
+     var marker = L.marker([57.795016, 23.236084]).addTo(map);
+     var marker = L.marker([56.459455, 25.32692]).addTo(map);
+     var marker = L.marker([56.903847, 24.100742]).addTo(map);
+     var marker = L.marker([56.856481, 23.845139]).addTo(map);
+     var marker = L.marker([56.955085, 24.13147]).addTo(map);
+     var marker = L.marker([56.913126, 24.053879]).addTo(map);
+     var marker = L.marker([56.919063, 24.039357]).addTo(map);
+     var marker = L.marker([54.642055, 25.301514]).addTo(map);
+     var marker = L.marker([47.857403, 12.650757]).addTo(map);
+     var marker = L.marker([48.861435, 2.334125]).addTo(map);
+     var marker = L.marker([51.501843, -0.140588]).addTo(map);
+     var marker = L.marker([41.90223, 12.457265]).addTo(map);
+     var marker = L.marker([56.910127, 23.698196]).addTo(map);
+     var marker = L.marker([56.954898, 24.0168]).addTo(map);
+     var marker = L.marker([39.022847, 125.731262]).addTo(map);
+     var marker = L.marker([38.897694, -77.036551]).addTo(map);
+     var marker = L.marker([-70.819396, -69.595466]).addTo(map);
+
+    function onMapClick(e) {
+        alert("You clicked the map at " + e.latlng);
+    }
+
+    map.on('click', onMapClick);
+
+    var popup = L.popup();
+
+    function onMapClick(e) {
+        popup
+            .setLatLng(e.latlng)
+            .setContent("You clicked the map at " + e.latlng.toString())
+            .openOn(map);
+    }
+
+    map.on('click', onMapClick);
+
+    
+   </script>
+  
+</body>
+</html>

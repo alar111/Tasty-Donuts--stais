@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tasty Donuts</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+          <div class="container">
+            <header>
+              <div class="logo-area">
+                <div class="logo-placeholderone">
+                  <div class="logo-placeholdertwo">
+                  <a href="index.html">
+                  <img src="logo.png" width="50px"></img>
+                </a>
+                </div>
+              </div>
+                </div>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="virtuli.html">Virtuļi</a></li>
+           <li><a href="karte.html">Kafejnīcu karte</a></li>
+          <li><a href="parmums.html">Par mums</a></li>
+        </ul>
+      </nav>
+
+          <div class="autorizacija">
+            <button class="autorizacija-button">Autorizācija</button>
+            <div class="autorizacija-content">
+              <a href="login.html">Ieiet kontā</a>
+              <a href="signup.html">Jauns konts</a>
+          </div>
+    </header>
+
+    <main>
+      <!-- Orange background for the donut boxes -->
+      <div class="orange-background">
+        <div class="box-row">
+       <div class="form-containerone">
+          <h1 >Par mums</h1>
+         
+          <p>Laipni lūdzam mūsu tiešsaistes veikalā “Tasty Donuts”! Mēs esam īsti virtuļu fani, un mūsu sortiments ir saldumu paradīze. Pie mums atradīsiet klasiskos, glazētos virtuļus ar un bez pildījumiem, kā arī unikālas garšas, ko nesastapsi parastās maiznīcās. Mēs cepam ar mīlestību un nogādājam tieši pie jūsu sliekšņa, lai jūs varētu baudīt svaigus virtuļus jebkurā laikā. “Tasty Donuts” ir ātri, garšīgi un ar baudu! <img src="20.webp" width="340px" ></img></p> 
+            
+       </div>
+         </div>
+         <div class="box-row">
+
+      <div class="galerija">
+      
+          
+
+          <div class="mySlides">
+            <img src="21.webp" style="width:1000px">
+          </div>
+
+          <div class="mySlides">
+            <img src="22.webp" style="width:1000px">
+          </div>
+
+          <div class="mySlides">
+            <img src="23.webp" style="width:1000px">
+          </div>
+
+        <div class="mySlides">
+          <img src="24.png" style="width:1000px">
+        </div>
+
+        <div class="mySlides">
+          <img src="25.png" style="width:1000px">
+        </div>
+
+        <div class="mySlides">
+          <img src="26.png" style="width:1000px">
+        </div>
+
+        <div class="mySlides">
+          <img src="27.png" style="width:1000px">
+        </div>
+
+        <div class="mySlides">
+          <img src="28.png" style="width:1000px">
+        </div>
+
+        <div class="mySlides">
+          <img src="29.png" style="width:1000px">
+        </div>
+
+        <div class="mySlides">
+          <img src="30.png" style="width:1000px">
+        </div>
+
+      
+          <a class="prev" onclick="plusSlides(-1)">❮</a>
+          <a class="next" onclick="plusSlides(1)">❯</a>
+
+       
+      </div>
+        </div>
+
+        <div class="box-row">
+
+        <div class="video">
+
+          <iframe width="1000" height="562,5" src="https://www.youtube-nocookie.com/embed/Ty227gZH55w?si=TWqQqnnLdGdKFypd&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        </div>
+          </div>
+        
+    </main>
+
+    <footer>
+      
+
+      <!-- Copyright in the center -->
+      <div class="footer-center">
+        Copyright ©2025 Tasty Donuts.
+      </div>
+    </footer>
+  </div>
+
+
+  <style>
+
+    .autorizacija-button {
+      background-color: #FA98B7;
+      font-family: "Anonymous Pro", monospace;
+      color: #000;
+      width: 160px;
+      padding: 0px;
+      font-weight: 500;
+      font-size: 20px;
+      border: none;
+    }
+
+    .autorizacija {
+      position: relative;
+      display: inline-block;
+    }
+
+    .autorizacija-content {
+      display: none;
+      position: absolute;
+      background-color: #ffffff;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .autorizacija-content a {
+      color: black;
+      padding: 8px 10px;
+      font-family: "Anonymous Pro", monospace;
+      font-weight: 500;
+      font-size: 20px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .autorizacija-content a:hover {background-color: #FA98B7;}
+
+    .autorizacija:hover .autorizacija-content {display: block;}
+
+    .autorizacija:hover .autorizacija-button {background-color: #FA98B7; color: #ffffff;}
+
+    /* Reset/normalize */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body gets an overall pink color (matches the top/header/footer in screenshot) */
+    body {
+      font-family: "Anonymous Pro", monospace;
+    }
+
+    /* Constrain overall site width */
+    .container {
+      max-width: 4096px;
+      min-width: 1900px;
+      min-height: 1080px;
+      margin: 0 auto;
+      /* If you’d like a background behind all content, uncomment:
+         background-color: #ffb6c1;
+      */
+    }
+
+
+    /* HEADER STYLES */
+    header {
+      background-color: #FA98B7; /* Pink top bar */
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 50px;
+    }
+
+    /* Logo area (left) */
+    .logo-area {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-placeholderone {
+      width: 160px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: #FA98B7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .logo-placeholdertwo {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .logo-placeholder span {
+      color: #fff;
+      font-size: 10px;
+      font-weight: bold;
+      line-height: 12px;
+    }
+
+    /* Navigation (center) */
+    .main-nav ul {
+      list-style: none;
+      display: flex;
+      gap: 50px;
+    }
+
+    .main-nav a {
+      text-decoration: none;
+      color: #ffffff; /* White nav text as per screenshot */
+      font-weight: 500;
+      font-size: 20px;
+    }
+
+    .main-nav a:hover {
+      text-decoration: none;
+      color: #E39C49; /* White nav text as per screenshot */
+      font-weight: 500;
+      font-size: 20px;
+    }
+
+
+    /* Log in (right) */
+    .login a {
+      text-decoration: none;
+      color: #000; /* Black text for 'Log in' */
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    /* MAIN CONTENT STYLES */
+    .orange-background {
+      background-color: #E39C49; /* Orange/brown area behind pink boxes */
+      padding: 40px 20px; /* Adjust spacing to match your screenshot */
+      max-height: 2420px; /* Enough height to fit 5 boxes comfortably */
+      min-height: 1070px;
+      
+    }
+
+    /* Two distinct rows of boxes */
+    .box-row {
+      display: flex;
+      gap: 40px; /* Space between boxes */
+      justify-content: center; /* Center them horizontally */
+      margin-bottom: 40px; /* Space between top/bottom rows */
+    }
+
+
+    .form-containerone {
+      background-color: #FA98B7;
+      width: 1250px;
+      height: 750px;
+      border-radius: 200px;
+      padding: 40px;
+      text-align: center;
+      gap: 15px;
+    }
+
+    .form-containerone h1 {
+      margin-bottom: 40px;
+      font-size: 50px;
+      color: #000;
+    
+      }
+    
+    .form-containerone p {
+    display: flex;
+    gap: 15px;
+    text-align: justify; /* Align labels to the left */
+      font-size: 30px;
+      max-width: 1200px;
+      }
+
+    .form-containerone img {
+      border-radius: 50px;
+
+    }
+    
+    .galerija {
+      background-color: #FA98B7;
+      width: 1250px;
+      height: 750px;
+      border-radius: 200px;
+      padding: 40px;
+      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+
+    .galerija img {
+      width: 100px;
+      height: auto;
+      cursor: pointer;
+      border-radius: 150px;
+    }
+
+
+
+    .video {
+      background-color: #FA98B7;
+      width: 1250px;
+      height: 750px;
+      border-radius: 200px;
+      display: flex;
+      text-align: center;
+      justify-content: center;
+       padding: 94px;
+      
+    }
+
+    .video iframe {
+     
+      border-radius: 100px;
+    }
+
+
+
+    /* FOOTER STYLES */
+    footer {
+      background-color: #FA98B7; /* Pink footer bar */
+      position: relative;
+      padding: 15px 20px;
+    }
+
+    /* Left and right pink “buttons” in footer */
+    .footer-button {
+      background-color: #ffffff;
+      display: inline-block;
+      padding: 5px 10px;
+      border-radius: 8px;
+    }
+
+    .footer-button a {
+      color: #000;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    /* Position them to the extreme left/right inside footer */
+    .footer-left {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .footer-right {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    /* Center text in the footer */
+    .footer-center {
+      text-align: center;
+      font-size: 14px;
+      color: #000;
+      font-weight: 500;
+    }
+
+
+    img {
+      vertical-align: middle;
+    }
+
+    /* Position the image container (needed to position the left and right arrows) */
+    .galerija{
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Hide the images by default */
+    .mySlides {
+      display: none;
+    }
+
+    /* Add a pointer when hovering over the thumbnail images */
+    .cursor {
+      cursor: pointer;
+    }
+
+    /* Next & previous buttons */
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 0px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 100px;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+      
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    .prev {
+      left: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+
+
+
+    /* Container for image text */
+    .caption-container {
+      text-align: center;
+      background-color: #222;
+      padding: 2px 16px;
+      color: white;
+    }
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+
+
+    /* Add a transparency effect for thumnbail images */
+    .demo {
+      opacity: 0.6;
+    }
+
+    .active,
+    .demo:hover {
+      opacity: 1;
+    }
+  </style>
+
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      if (slides.length === 0) return; // если слайдов вообще нет, ничего не делать
+
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+
+      // Прячем все слайды
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+
+      // Показываем текущий слайд
+      slides[slideIndex - 1].style.display = "block";
+    }
+  </script>
+
+  
+</body>
+</html>
